@@ -1,0 +1,17 @@
+---
+# author = "Sawan Choudhary"
+# copyright = "Copyright 2017, CalsoftInc"
+# maintainer = "Calsoft IT"
+
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: include vars
+    include_vars: dict_from_csv.py
+
+  - include: "{{ item }}.yml" 
+    with_items: 
+      - "{{ pckg_info }}" 
+       
+

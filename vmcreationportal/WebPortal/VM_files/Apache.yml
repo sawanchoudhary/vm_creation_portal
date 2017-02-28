@@ -1,0 +1,19 @@
+---
+# author = "Sawan Choudhary"
+# copyright = "Copyright 2017, CalsoftInc"
+# maintainer = "Calsoft IT"
+
+- name: Copy the apache directory
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/apache
+    dest: /dev
+
+- name: Install apache with dependencies
+  command: sudo dpkg -i -R /dev/apache
+
+- name: Remove apache directory
+  file:
+   state: absent
+   path: /dev/apache
+
+

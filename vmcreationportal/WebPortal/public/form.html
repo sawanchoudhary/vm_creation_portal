@@ -1,0 +1,148 @@
+<form class="form-horizontal" id="detailform">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend style="font-size:28px;"><img src="img/logo.png" class="img" style="height:50px;">Project VM Creation Portal<button class="btn btn-danger" style="float:right; margin-top:7px;" id="logout">Logout</button></legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="owner">Owner</label>
+            <div class="col-md-4">
+                <input id="owner" name="owner" type="text" placeholder="" class="form-control input-md" readonly="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-4">
+                <input id="email" name="email" type="email" placeholder="" class="form-control input-md" readonly="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="pname">Project Name</label>
+            <div class="col-md-4">
+                <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <!--<label class="col-md-4 control-label" for="pstart">Project Start Date</label>-->
+            <div class="col-md-4">
+                <input id="pstart" name="pstart" type="hidden" placeholder="" class="form-control input-md" readonly="">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <!--<label class="col-md-4 control-label" for="pemd">Project End Date</label>-->
+            <div class="col-md-4">
+                <input id="pend" name="pend" type="hidden" placeholder="" class="form-control input-md" readonly="">
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="os">OS</label>
+            <div class="col-md-4">
+                <select id="os" name="os" class="form-control">
+                      <option value="Ubuntu 64-bit Server">Ubuntu 64-bit Server</option>
+                                        
+                    </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="osversion">OS Version</label>
+            <div class="col-md-4">
+                <select id="osversion" name="osversion" class="form-control">
+                      
+                      <option value="14.04">14.04</option>
+                      
+                    </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="vcpu">VCPU</label>
+            <div class="col-md-4">
+                <input id="vcpu" name="vcpu" type="number" placeholder="" class="form-control input-md" min="1" max="4" required="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ram">RAM in GB</label>
+            <div class="col-md-4">
+                <input id="ram" name="ram" type="number" placeholder="" class="form-control input-md" min="1" max="10" required="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="storage">Storage in GB</label>
+            <div class="col-md-4">
+                <input id="storage" name="storage" type="number" placeholder="" class="form-control input-md" min="6" max="50" required="">
+            </div>
+        </div>
+
+
+        <!-- Multiple Checkboxes -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="packages">Packages</label>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="packages-0">
+                          <input type="checkbox" name="packages" id="packages-0" value="Git">
+                          Git
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="packages-3">
+                          <input type="checkbox" name="packages" id="packages-3" value="Jenkins">
+                          Jenkins
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="packages-4">
+                          <input type="checkbox" name="packages" id="packages-4" value="Java">
+                          Java
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="packages-5">
+                          <input type="checkbox" name="packages" id="packages-5" value="Apache">
+                          Apache
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="packages-6">
+                          <input type="checkbox" name="packages" id="packages-6" value="Ansible">
+                          Ansible
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="packages-8">
+                          <input type="checkbox" name="packages" id="packages-8" value="Nginx">
+                          Nginx
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

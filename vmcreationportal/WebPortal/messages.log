@@ -1,0 +1,1443 @@
+0
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for VM Guantanamo_ot6zE.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+fatal: [172.17.75.51]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Syntax Error while loading YAML.\n\n\nThe error appears to have been in 'True': line 3, column 21, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\n(could not open file to display line)"}
+	to retry, use: --limit @/home/eng/vmcreationportal/WebPortal/VM_files/CSV/main_change_vm_config.retry
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=1    changed=0    unreachable=0    failed=1   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+fatal: [172.17.75.51]: FAILED! => {"ansible_facts": {}, "changed": false, "failed": true, "message": "Syntax Error while loading YAML.\n\n\nThe error appears to have been in 'True': line 3, column 21, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\n(could not open file to display line)"}
+	to retry, use: --limit @/home/eng/vmcreationportal/WebPortal/VM_files/CSV/main_power_on_vm.retry
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=1    changed=0    unreachable=0    failed=1   
+
+
+PLAY RECAP *********************************************************************
+
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 17, in <module>
+    from send_error_mail import send_error_mail_fn
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/send_error_mail.py", line 12, in <module>
+    from dict_from_csv_py import gen_info
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/dict_from_csv_py.py", line 3
+    pckg_info= ["Git""]]
+                       ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/demo_ssh.py", line 3, in <module>
+    from send_error_mail import send_error_mail_fn
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/send_error_mail.py", line 12, in <module>
+    from dict_from_csv_py import gen_info
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/dict_from_csv_py.py", line 3
+    pckg_info= ["Git""]]
+                       ^
+SyntaxError: EOL while scanning string literal
+ [WARNING]: provided hosts list is empty, only localhost is available
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/send_process_complete_mail.py", line 12, in <module>
+    from dict_from_csv_py import gen_info
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/dict_from_csv_py.py", line 3
+    pckg_info= ["Git""]]
+                       ^
+SyntaxError: EOL while scanning string literal
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for asdhkfgasd_KBzMx.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.119]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.119]
+
+TASK [include] *****************************************************************
+
+PLAY RECAP *********************************************************************
+172.17.75.119              : ok=2    changed=0    unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.119 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for NBUSawan_wLT4g.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+Unable to connect to 172.17.75.5
+Failure, could not create VM
+
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 237, in <module>
+    exit(main())
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 199, in main
+    raise SystemError("Error")
+SystemError: Error
+
+1
+1
+1
+1
+1
+1
+1
+0
+0
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for ghghghgh_YSYaK.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+Unable to connect to 172.17.75.5
+Failure, could not create VM
+
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 237, in <module>
+    exit(main())
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 199, in main
+    raise SystemError("Error")
+SystemError: Error
+
+1
+0
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for Sawan_HT10i.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+Unable to connect to 172.17.75.5
+Failure, could not create VM
+
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 237, in <module>
+    exit(main())
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 199, in main
+    raise SystemError("Error")
+SystemError: Error
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for test_NLbIf.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.120]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.120]
+
+TASK [include] *****************************************************************
+
+PLAY RECAP *********************************************************************
+172.17.75.120              : ok=2    changed=0    unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.120 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for Hauskhaas_IXlvF.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.121]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.121]
+
+TASK [include] *****************************************************************
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Git.yml for 172.17.75.121
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Jenkins.yml for 172.17.75.121
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Java.yml for 172.17.75.121
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Apache.yml for 172.17.75.121
+
+TASK [Copy the git directory file] *********************************************
+changed: [172.17.75.121]
+
+TASK [Install git with dependencies] *******************************************
+changed: [172.17.75.121]
+
+TASK [Remove git directory] ****************************************************
+changed: [172.17.75.121]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.121]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.121]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.121]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.121]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.121]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.121]
+
+TASK [Copy daemon directory] ***************************************************
+changed: [172.17.75.121]
+
+TASK [Install daemon with dependencies] ****************************************
+changed: [172.17.75.121]
+
+TASK [Remove daemon directory] *************************************************
+changed: [172.17.75.121]
+
+TASK [Copy jenkins deb file] ***************************************************
+changed: [172.17.75.121]
+
+TASK [Install jenkins with dependencies] ***************************************
+changed: [172.17.75.121]
+
+TASK [Remove jenkins deb file] *************************************************
+changed: [172.17.75.121]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.121]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.121]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.121]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.121]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.121]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.121]
+
+TASK [Copy the apache directory] ***********************************************
+changed: [172.17.75.121]
+
+TASK [Install apache with dependencies] ****************************************
+changed: [172.17.75.121]
+
+TASK [Remove apache directory] *************************************************
+changed: [172.17.75.121]
+
+PLAY RECAP *********************************************************************
+172.17.75.121              : ok=30   changed=24   unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.121 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for VM_Tortilla_67FIY.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.123]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.123]
+
+TASK [include] *****************************************************************
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Git.yml for 172.17.75.123
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Ansible.yml for 172.17.75.123
+
+TASK [Copy the git directory file] *********************************************
+changed: [172.17.75.123]
+
+TASK [Install git with dependencies] *******************************************
+changed: [172.17.75.123]
+
+TASK [Remove git directory] ****************************************************
+changed: [172.17.75.123]
+
+TASK [Copy the ansible directory] **********************************************
+changed: [172.17.75.123]
+
+TASK [Install ansible with dependencies] ***************************************
+changed: [172.17.75.123]
+
+TASK [Remove ansible directory] ************************************************
+changed: [172.17.75.123]
+
+PLAY RECAP *********************************************************************
+172.17.75.123              : ok=10   changed=6    unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.123 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+0
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for NBU SKILL BUILDING_Z34tp.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+Unable to connect to 172.17.75.5
+Failure, could not create VM
+
+Traceback (most recent call last):
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 237, in <module>
+    exit(main())
+  File "/home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py", line 199, in main
+    raise SystemError("Error")
+SystemError: Error
+
+1
+1
+1
+1
+1
+0
+{ InvalidCredentialsError: 80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580 
+    at messageCallback (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1419:45)
+    at Parser.onMessage (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1089:14)
+    at emitOne (events.js:96:13)
+    at Parser.emit (events.js:188:7)
+    at Parser.write (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/messages/parser.js:111:8)
+    at Socket.onData (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1076:22)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:548:20)
+  lde_message: '80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580\u0000',
+  lde_dn: null }
+0
+0
+0
+0
+{ InvalidCredentialsError: 80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580 
+    at messageCallback (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1419:45)
+    at Parser.onMessage (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1089:14)
+    at emitOne (events.js:96:13)
+    at Parser.emit (events.js:188:7)
+    at Parser.write (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/messages/parser.js:111:8)
+    at Socket.onData (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1076:22)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:548:20)
+  lde_message: '80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580\u0000',
+  lde_dn: null }
+{ InvalidCredentialsError: 80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580 
+    at messageCallback (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1419:45)
+    at Parser.onMessage (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1089:14)
+    at emitOne (events.js:96:13)
+    at Parser.emit (events.js:188:7)
+    at Parser.write (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/messages/parser.js:111:8)
+    at Socket.onData (/home/eng/vmcreationportal/WebPortal/node_modules/ldapjs/lib/client/client.js:1076:22)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:548:20)
+  lde_message: '80090308: LdapErr: DSID-0C0903C8, comment: AcceptSecurityContext error, data 52e, v2580\u0000',
+  lde_dn: null }
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for NBU_dSQFl.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.124]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.124]
+
+TASK [include] *****************************************************************
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Git.yml for 172.17.75.124
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Jenkins.yml for 172.17.75.124
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Java.yml for 172.17.75.124
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Apache.yml for 172.17.75.124
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Ansible.yml for 172.17.75.124
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Nginx.yml for 172.17.75.124
+
+TASK [Copy the git directory file] *********************************************
+changed: [172.17.75.124]
+
+TASK [Install git with dependencies] *******************************************
+changed: [172.17.75.124]
+
+TASK [Remove git directory] ****************************************************
+changed: [172.17.75.124]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.124]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.124]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.124]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.124]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.124]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.124]
+
+TASK [Copy daemon directory] ***************************************************
+changed: [172.17.75.124]
+
+TASK [Install daemon with dependencies] ****************************************
+changed: [172.17.75.124]
+
+TASK [Remove daemon directory] *************************************************
+changed: [172.17.75.124]
+
+TASK [Copy jenkins deb file] ***************************************************
+changed: [172.17.75.124]
+
+TASK [Install jenkins with dependencies] ***************************************
+changed: [172.17.75.124]
+
+TASK [Remove jenkins deb file] *************************************************
+changed: [172.17.75.124]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.124]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.124]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.124]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.124]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.124]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.124]
+
+TASK [Copy the apache directory] ***********************************************
+changed: [172.17.75.124]
+
+TASK [Install apache with dependencies] ****************************************
+changed: [172.17.75.124]
+
+TASK [Remove apache directory] *************************************************
+changed: [172.17.75.124]
+
+TASK [Copy the ansible directory] **********************************************
+changed: [172.17.75.124]
+
+TASK [Install ansible with dependencies] ***************************************
+changed: [172.17.75.124]
+
+TASK [Remove ansible directory] ************************************************
+changed: [172.17.75.124]
+
+TASK [Copy the nginx directory file] *******************************************
+changed: [172.17.75.124]
+
+TASK [Install nginx with dependencies] *****************************************
+changed: [172.17.75.124]
+
+TASK [Remove nginx directory] **************************************************
+changed: [172.17.75.124]
+
+PLAY RECAP *********************************************************************
+172.17.75.124              : ok=38   changed=30   unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.124 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for NBU_2m39m.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.125]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.125]
+
+TASK [include] *****************************************************************
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Git.yml for 172.17.75.125
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Jenkins.yml for 172.17.75.125
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Java.yml for 172.17.75.125
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Apache.yml for 172.17.75.125
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Ansible.yml for 172.17.75.125
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Nginx.yml for 172.17.75.125
+
+TASK [Copy the git directory file] *********************************************
+changed: [172.17.75.125]
+
+TASK [Install git with dependencies] *******************************************
+changed: [172.17.75.125]
+
+TASK [Remove git directory] ****************************************************
+changed: [172.17.75.125]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.125]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.125]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.125]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.125]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.125]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.125]
+
+TASK [Copy daemon directory] ***************************************************
+changed: [172.17.75.125]
+
+TASK [Install daemon with dependencies] ****************************************
+changed: [172.17.75.125]
+
+TASK [Remove daemon directory] *************************************************
+changed: [172.17.75.125]
+
+TASK [Copy jenkins deb file] ***************************************************
+changed: [172.17.75.125]
+
+TASK [Install jenkins with dependencies] ***************************************
+changed: [172.17.75.125]
+
+TASK [Remove jenkins deb file] *************************************************
+changed: [172.17.75.125]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.125]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.125]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.125]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.125]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.125]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.125]
+
+TASK [Copy the apache directory] ***********************************************
+changed: [172.17.75.125]
+
+TASK [Install apache with dependencies] ****************************************
+changed: [172.17.75.125]
+
+TASK [Remove apache directory] *************************************************
+changed: [172.17.75.125]
+
+TASK [Copy the ansible directory] **********************************************
+changed: [172.17.75.125]
+
+TASK [Install ansible with dependencies] ***************************************
+changed: [172.17.75.125]
+
+TASK [Remove ansible directory] ************************************************
+changed: [172.17.75.125]
+
+TASK [Copy the nginx directory file] *******************************************
+changed: [172.17.75.125]
+
+TASK [Install nginx with dependencies] *****************************************
+changed: [172.17.75.125]
+
+TASK [Remove nginx directory] **************************************************
+changed: [172.17.75.125]
+
+PLAY RECAP *********************************************************************
+172.17.75.125              : ok=38   changed=30   unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.125 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+---------------------------------------------------------------------------------------------------------------
+ Started VM Creation Process for NBU_frQ6m.csv
+Read new CSV file name successfully
+Started writing dict_from_csv.py
+Fininshed writing dict_from_csv.py
+Started writing dict_from_csv_py.py
+Finished writing dict_from_csv_py.py
+Started changing VM Name into OVF.py
+Finished changing VM Name into OVF.py
+Started writing current VM Name into store_last_vm_name.py
+Finished writing current VM Name into store_last_vm_name.py
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Wait for newly created vm to be stable] **********************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+TASK [Reconfigure VM] **********************************************************
+changed: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+
+PLAY [esxi] ********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.51]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.51]
+
+TASK [Power on vm] *************************************************************
+changed: [172.17.75.51]
+
+TASK [Wait for vm to start] ****************************************************
+Pausing for 120 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [172.17.75.51]
+
+PLAY RECAP *********************************************************************
+172.17.75.51               : ok=4    changed=1    unreachable=0    failed=0   
+
+Starting demo SSH
+Finished demo SSH
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [172.17.75.126]
+
+TASK [include vars] ************************************************************
+ok: [172.17.75.126]
+
+TASK [include] *****************************************************************
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Git.yml for 172.17.75.126
+included: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/Jenkins.yml for 172.17.75.126
+
+TASK [Copy the git directory file] *********************************************
+changed: [172.17.75.126]
+
+TASK [Install git with dependencies] *******************************************
+changed: [172.17.75.126]
+
+TASK [Remove git directory] ****************************************************
+changed: [172.17.75.126]
+
+TASK [Copy jre directory file] *************************************************
+changed: [172.17.75.126]
+
+TASK [Install jre with dependencies] *******************************************
+changed: [172.17.75.126]
+
+TASK [Remove jre directory] ****************************************************
+changed: [172.17.75.126]
+
+TASK [Copy jdk directory file] *************************************************
+changed: [172.17.75.126]
+
+TASK [Install jdk with dependencies] *******************************************
+changed: [172.17.75.126]
+
+TASK [Remove jdk directory] ****************************************************
+changed: [172.17.75.126]
+
+TASK [Copy daemon directory] ***************************************************
+changed: [172.17.75.126]
+
+TASK [Install daemon with dependencies] ****************************************
+changed: [172.17.75.126]
+
+TASK [Remove daemon directory] *************************************************
+changed: [172.17.75.126]
+
+TASK [Copy jenkins deb file] ***************************************************
+changed: [172.17.75.126]
+
+TASK [Install jenkins with dependencies] ***************************************
+changed: [172.17.75.126]
+
+TASK [Remove jenkins deb file] *************************************************
+changed: [172.17.75.126]
+
+PLAY RECAP *********************************************************************
+172.17.75.126              : ok=19   changed=15   unreachable=0    failed=0   
+
+Start to send process completion mail
+Open hosts1 file to read new IP
+Closed hosts1 file, successful reading new IP
+Finished sending process completion mail
+# Host 172.17.75.126 found: line 2 type ECDSA
+Start removing key from known_hosts
+Finished removing key from known_hosts
+Start to clear hosts1 file
+Finished clearing hosts1 file
+Start to write to busy.txt to start taking new request
+Finished writing to busy.txt to start taking new request
+Task finished
+----------------------------------------------------------------------------------
+
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+/home/eng/.ssh/known_hosts updated.
+Original contents retained as /home/eng/.ssh/known_hosts.old
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0

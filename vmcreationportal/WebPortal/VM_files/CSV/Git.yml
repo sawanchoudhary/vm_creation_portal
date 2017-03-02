@@ -1,0 +1,20 @@
+---
+# author = "Sawan Choudhary"
+# copyright = "Copyright 2017, CalsoftInc"
+# maintainer = "Calsoft IT"
+
+
+- name: Copy the git directory file
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/git
+    dest: /dev
+  
+- name: Install git with dependencies
+  command: sudo dpkg -i -R /dev/git
+
+- name: Remove git directory
+  file:
+   state: absent
+   path: /dev/git
+
+

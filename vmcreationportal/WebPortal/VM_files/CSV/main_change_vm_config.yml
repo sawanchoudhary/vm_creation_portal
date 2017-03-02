@@ -1,0 +1,39 @@
+---
+# author = "Sawan Choudhary"
+# copyright = "Copyright 2017, CalsoftInc"
+# maintainer = "Calsoft IT"
+
+- hosts: esxi
+  become: yes
+
+  tasks:
+  - name: include vars
+    include_vars: dict_from_csv.py
+
+  - name: Wait for newly created vm to be stable
+    pause: seconds=120
+
+  - name: Reconfigure VM
+    vsphere_guest:
+      vcenter_hostname: 172.17.75.51
+      username: root
+      password: Calsoft@123
+      guest: "{{gen_info[5]}}"
+      state: reconfigured
+      vm_extra_config:
+        vcpu.hotadd: yes
+        mem.hotadd:  yes
+        notes: This is a test VM
+      vm_disk:
+        disk1:
+          size_gb: "{{vm_info[2]}}"
+          type: thick
+          datastore: datastore1
+      vm_hardware:
+        memory_mb: "{{vm_info[1]}}"
+        num_cpus: "{{vm_info[0]}}"
+        osid: ubuntu64Guest
+      esxi:
+        datacenter: ha-datacenter
+        hostname: localhost.localdomain
+      validate_certs: False

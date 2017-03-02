@@ -1,0 +1,4 @@
+[esxi]
+172.17.75.51 ansible_user=root ansible_ssh_pass=Calsoft@123
+
+

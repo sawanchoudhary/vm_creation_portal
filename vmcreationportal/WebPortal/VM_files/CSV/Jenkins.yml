@@ -1,0 +1,59 @@
+---
+# author = "Sawan Choudhary"
+# copyright = "Copyright 2017, CalsoftInc"
+# maintainer = "Calsoft IT"
+
+- name: Copy jre directory file
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/openjdk-7-jre
+    dest: /dev
+
+- name: Install jre with dependencies
+  command: sudo dpkg -i -R /dev/openjdk-7-jre
+
+- name: Remove jre directory
+  file:
+   state: absent
+   path: /dev/openjdk-7-jre
+
+- name: Copy jdk directory file
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/openjdk-7-jdk
+    dest: /dev
+
+- name: Install jdk with dependencies
+  command: sudo dpkg -i -R /dev/openjdk-7-jdk
+
+- name: Remove jdk directory
+  file:
+   state: absent
+   path: /dev/openjdk-7-jdk
+
+- name: Copy daemon directory
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/daemon
+    dest: /dev
+
+
+- name: Install daemon with dependencies
+  command: sudo dpkg -i -R /dev/daemon
+
+- name: Remove daemon directory
+  file:
+   state: absent
+   path: /dev/daemon
+
+- name: Copy jenkins deb file
+  copy:
+    src: /home/eng/vmcreationportal/WebPortal/VM_files/CSV/jenkins/jenkins_2.19.1_all.deb
+    dest: /dev
+
+- name: Install jenkins with dependencies
+  command: sudo dpkg -i /dev/jenkins_2.19.1_all.deb
+
+- name: Remove jenkins deb file
+  file:
+   state: absent
+   path: /dev/jenkins_2.19.1_all.deb
+
+

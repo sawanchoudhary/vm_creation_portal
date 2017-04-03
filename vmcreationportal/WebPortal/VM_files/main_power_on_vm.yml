@@ -12,9 +12,9 @@
 
   - name: Power on vm
     vsphere_guest:
-      vcenter_hostname: 172.17.75.51
-      username: root
-      password: Calsoft@123
+      vcenter_hostname: 172.17.xx.xx
+      username: xxxx
+      password: xxxxxxxxxx
       guest: "{{gen_info[5]}}"
       state: powered_on
       validate_certs: False

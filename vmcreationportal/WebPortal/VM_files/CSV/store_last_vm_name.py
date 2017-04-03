@@ -1,1 +1,0 @@
-last_vm_name = "NBU_frQ6m"

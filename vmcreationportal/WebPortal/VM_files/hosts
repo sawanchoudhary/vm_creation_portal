@@ -1,4 +1,4 @@
 [esxi]
-172.17.75.51 ansible_user=root ansible_ssh_pass=Calsoft@123
+172.17.xx.xx ansible_user=xxxx ansible_ssh_pass=xxxxxxxx
 
 

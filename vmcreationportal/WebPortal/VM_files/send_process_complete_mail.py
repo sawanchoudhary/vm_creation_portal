@@ -69,7 +69,7 @@ def send_email():
 
     server = smtplib.SMTP('csom2.calsoft.org', 587)
     server.starttls()
-    server.login(fromaddr, "monitor")
+    server.login(fromaddr, "xxxxx")
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()

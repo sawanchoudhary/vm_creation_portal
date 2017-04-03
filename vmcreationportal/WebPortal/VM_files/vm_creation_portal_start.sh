@@ -7,7 +7,7 @@
 
 python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/create_dict_from_csv.py
 
-python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py -s 172.17.75.51 -u root -p Calsoft@123 -v /home/eng/vmcreationportal/WebPortal/VM_files/CSV/VM_Creation_Portal_Template-disk1.vmdk -f /home/eng/vmcreationportal/WebPortal/VM_files/CSV/VM_Creation_Portal_Template.ovf
+python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/createvm.py -s 172.17.xx.xx -u root -p xxxxxxxxxxx -v /home/eng/vmcreationportal/WebPortal/VM_files/CSV/VM_Creation_Portal_Template-disk1.vmdk -f /home/eng/vmcreationportal/WebPortal/VM_files/CSV/VM_Creation_Portal_Template.ovf
 
 if [ $? = 0 ]; then
 
@@ -15,7 +15,7 @@ if [ $? = 0 ]; then
 
     ansible-playbook -i /home/eng/vmcreationportal/WebPortal/VM_files/CSV/hosts /home/eng/vmcreationportal/WebPortal/VM_files/CSV/main_power_on_vm.yml
 
-    python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/parse_new_vm_ip1.py -s 172.17.75.51 -u root -p Calsoft@123
+    python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/parse_new_vm_ip1.py -s 172.17.xx.xx -u xxxx -p xxxxxxxxxx
 
     python /home/eng/vmcreationportal/WebPortal/VM_files/CSV/demo_ssh.py
 

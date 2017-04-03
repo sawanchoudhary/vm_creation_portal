@@ -19,8 +19,8 @@ try:
     s = pxssh.pxssh()
     #hostname = raw_input('hostname: ')
     hostname = file_name1[0]
-    username = 'ituser'
-    password = 'Calsoft@123'
+    username = 'xxxx'
+    password = 'xxxxxxxx'
     #password = getpass.getpass('password: ')
     s.login (hostname, username, password)
     s.sendline ('uptime')   # run a command
